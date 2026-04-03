@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge | Organiser Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="organiser">
+  <div class="page-shell">
+    <nav class="topbar">
+      <div class="topbar-actions">
+        <a class="brand" href="./index.html">SkillBridge</a>
+        <div class="nav-links">
+          <a href="./index.html">Home</a>
+          <a href="./volunteer.html">Volunteer</a>
+        </div>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark mode</button>
+    </nav>
+
+    <main class="section">
+      <div class="matcher-layout">
+        <aside class="form-card stacked-card">
+          <p class="eyebrow">Organiser access</p>
+          <h3>Create organiser account</h3>
+          <form id="organiser-signup-form">
+            <label>
+              Organisation name
+              <input id="organiser-name" type="text" required>
+            </label>
+            <label>
+              Email
+              <input id="organiser-email" type="email" required>
+            </label>
+            <label>
+              Password
+              <input id="organiser-password" type="password" required>
+            </label>
+            <button class="button primary full-width" type="submit">Sign up as organiser</button>
+          </form>
+          <p id="organiser-signup-message" class="feedback"></p>
+
+          <h3 class="subheading">Organiser login</h3>
+          <form id="organiser-login-form">
+            <label>
+              Email
+              <input id="organiser-login-email" type="email" required>
+            </label>
+            <label>
+              Password
+              <input id="organiser-login-password" type="password" required>
+            </label>
+            <button class="button secondary full-width" type="submit">Login</button>
+          </form>
+          <p id="organiser-login-message" class="feedback"></p>
+
+          <div class="mini-card">
+            <h4>Registered volunteers</h4>
+            <div id="volunteer-count" class="empty-state">No volunteers registered yet.</div>
+          </div>
+        </aside>
+
+        <section class="results-card">
+          <div class="results-header">
+            <div>
+              <p class="eyebrow">Organiser dashboard</p>
+              <h3>Post requirement and match volunteers</h3>
+            </div>
+            <div class="legend" id="organiser-status">Please log in as an organiser to run matching.</div>
+          </div>
+
+          <form id="request-form" class="request-grid">
+            <label>
+              Required skill
+              <select id="skill" name="skill">
+                <option value="graphic design">Graphic Design</option>
+                <option value="web development">Web Development</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="content writing">Content Writing</option>
+              </select>
+            </label>
+            <label>
+              Urgency
+              <select id="urgency" name="urgency">
+                <option value="today">Today</option>
+                <option value="tomorrow">Tomorrow</option>
+                <option value="this_week">This Week</option>
+              </select>
+            </label>
+            <label>
+              Date needed
+              <input id="date-needed" name="date-needed" type="date" value="2026-04-05">
+            </label>
+            <label>
+              Organisation address
+              <input id="request-address" name="request-address" type="text" placeholder="Street, area, landmark" required>
+            </label>
+            <label>
+              City
+              <input id="request-city" name="request-city" type="text" placeholder="Ahmedabad" required>
+            </label>
+            <label>
+              Start time
+              <input id="start-time" name="start-time" type="time" value="15:00">
+            </label>
+            <label>
+              Duration (hours)
+              <input id="duration" name="duration" type="number" min="1" max="6" value="2">
+            </label>
+            <button class="button primary full-width" type="submit">Generate matches</button>
+          </form>
+
+          <div id="results" class="results-grid top-gap"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./supabase-config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

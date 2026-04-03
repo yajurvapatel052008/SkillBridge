@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge | Volunteer Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="volunteer">
+  <div class="page-shell">
+    <nav class="topbar">
+      <div class="topbar-actions">
+        <a class="brand" href="./index.html">SkillBridge</a>
+        <div class="nav-links">
+          <a href="./index.html">Home</a>
+          <a href="./organiser.html">Organiser</a>
+        </div>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark mode</button>
+    </nav>
+
+    <main class="section auth-layout">
+      <section class="form-card">
+        <p class="eyebrow">Volunteer access</p>
+        <h3>Create volunteer account</h3>
+        <form id="volunteer-signup-form">
+          <label>
+            Full name
+            <input id="volunteer-name" type="text" required>
+          </label>
+          <label>
+            Email
+            <input id="volunteer-email" type="email" required>
+          </label>
+          <label>
+            Password
+            <input id="volunteer-password" type="password" required>
+          </label>
+          <label>
+            Professional title
+            <input id="volunteer-title" type="text" placeholder="Graphic Designer" required>
+          </label>
+          <label>
+            Primary skill
+            <select id="volunteer-skill" required>
+              <option value="graphic design">Graphic Design</option>
+              <option value="web development">Web Development</option>
+              <option value="plumbing">Plumbing</option>
+              <option value="content writing">Content Writing</option>
+            </select>
+          </label>
+          <label>
+            Skill proficiency (0-100)
+            <input id="volunteer-proficiency" type="number" min="0" max="100" value="85" required>
+          </label>
+          <label>
+            Full address
+            <input id="volunteer-address" type="text" placeholder="Street, area, landmark" required>
+          </label>
+          <label>
+            City
+            <input id="volunteer-city" type="text" placeholder="Ahmedabad" required>
+          </label>
+          <label>
+            Trust score (0-100)
+            <input id="volunteer-trust" type="number" min="0" max="100" value="80" required>
+          </label>
+          <label>
+            Availability urgency bucket
+            <select id="volunteer-urgency" required>
+              <option value="today">Today</option>
+              <option value="tomorrow">Tomorrow</option>
+              <option value="this_week">This Week</option>
+            </select>
+          </label>
+          <label>
+            Available from
+            <input id="volunteer-start" type="time" value="14:00" required>
+          </label>
+          <label>
+            Available until
+            <input id="volunteer-end" type="time" value="18:00" required>
+          </label>
+          <button class="button primary full-width" type="submit">Sign up as volunteer</button>
+        </form>
+        <p id="volunteer-signup-message" class="feedback"></p>
+      </section>
+
+      <section class="form-card">
+        <p class="eyebrow">Returning user</p>
+        <h3>Volunteer login</h3>
+        <form id="volunteer-login-form">
+          <label>
+            Email
+            <input id="volunteer-login-email" type="email" required>
+          </label>
+          <label>
+            Password
+            <input id="volunteer-login-password" type="password" required>
+          </label>
+          <button class="button secondary full-width" type="submit">Login</button>
+        </form>
+        <p id="volunteer-login-message" class="feedback"></p>
+
+        <div class="mini-card">
+          <h4>Your saved profile</h4>
+          <div id="volunteer-profile-preview" class="empty-state">Log in to preview your saved volunteer profile.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./supabase-config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

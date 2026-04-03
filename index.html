@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge | Role Selection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="home">
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="topbar-actions">
+          <div class="brand">SkillBridge</div>
+          <div class="pill">Hackathon Prototype</div>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark mode</button>
+      </nav>
+
+      <div class="hero-grid">
+        <section class="hero-copy">
+          <p class="eyebrow">Volunteer Skill-Matching Engine</p>
+          <h1>Two-role platform for skill-first volunteer matching.</h1>
+          <p class="hero-text">
+            Volunteers create their own profile and availability. Organisers log in separately,
+            post a requirement, and the system ranks only the volunteers who actually signed up.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="./volunteer.html">I am a volunteer</a>
+            <a class="button secondary" href="./organiser.html">I am an organiser</a>
+          </div>
+
+          <div class="stats">
+            <article class="stat-card">
+              <span class="stat-value">Role-based</span>
+              <span class="stat-label">separate entry pages</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-value">Live data</span>
+              <span class="stat-label">from volunteer signup</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-value">Smart match</span>
+              <span class="stat-label">skill, time, distance, trust</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="hero-panel">
+          <div class="panel-card focus-card">
+            <p class="panel-kicker">Prototype flow</p>
+            <h2>Register volunteers first, then match them from the organiser dashboard.</h2>
+            <ul class="feature-list">
+              <li>Volunteer sign up and login</li>
+              <li>Organiser sign up and login</li>
+              <li>Volunteer profile stored in browser</li>
+              <li>Organiser sees only registered volunteers</li>
+            </ul>
+          </div>
+
+          <div class="panel-card glass-card">
+            <p class="panel-kicker">Demo tip</p>
+            <div class="score-ring">
+              <span>3</span>
+              <small>steps</small>
+            </div>
+            <p class="panel-text">
+              Create 2-3 volunteer profiles with different skills, then log in as an organiser
+              and show the ranking engine in action.
+            </p>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">How to demo</p>
+          <h2>Simple and judge-friendly flow</h2>
+        </div>
+
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <span class="step-tag">01</span>
+            <h3>Volunteer fills profile</h3>
+            <p>Name, skill, address, city, trust score, and available time slots are stored for matching.</p>
+          </article>
+          <article class="workflow-card">
+            <span class="step-tag">02</span>
+            <h3>Organiser posts need</h3>
+            <p>The organiser chooses the exact skill, address, city, urgency, start time, and duration.</p>
+          </article>
+          <article class="workflow-card">
+            <span class="step-tag">03</span>
+            <h3>Engine ranks matches</h3>
+            <p>The system recommends the strongest volunteer using only the profiles created in the app.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./supabase-config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
