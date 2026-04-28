@@ -3,106 +3,291 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillBridge | Role Selection</title>
+  <title>SkillBridge | Connect. Match. Impact.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body data-page="home">
   <div class="page-shell">
-    <header class="hero">
-      <nav class="topbar">
-        <div class="topbar-actions">
-          <div class="brand">SkillBridge</div>
-          <div class="pill">Hackathon Prototype</div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-icon">🌟</span>
+          <span class="logo-text">SkillBridge</span>
         </div>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark mode</button>
-      </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </nav>
 
-      <div class="hero-grid">
-        <section class="hero-copy">
-          <p class="eyebrow">Volunteer Skill-Matching Engine</p>
-          <h1>Two-role platform for skill-first volunteer matching.</h1>
-          <p class="hero-text">
-            Volunteers create their own profile and availability. Organisers log in separately,
-            post a requirement, and the system ranks only the volunteers who actually signed up.
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <div class="hero-text-group">
+          <p class="hero-tag">🚀 Connecting Skills with Purpose</p>
+          <h1>Connect Volunteers with Meaningful Opportunities</h1>
+          <p class="hero-description">
+            SkillBridge is a smart matching platform that connects passionate volunteers 
+            with organizations that need their skills. No more endless searching—just perfect matches.
           </p>
-
-          <div class="hero-actions">
-            <a class="button primary" href="./volunteer.html">I am a volunteer</a>
-            <a class="button secondary" href="./organiser.html">I am an organiser</a>
+          
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="./volunteer.html">
+              <span class="btn-icon">👤</span>
+              <span class="btn-text">I'm a Volunteer</span>
+            </a>
+            <a class="btn btn-secondary" href="./organiser.html">
+              <span class="btn-icon">🏢</span>
+              <span class="btn-text">I'm an Organiser</span>
+            </a>
           </div>
+        </div>
 
-          <div class="stats">
-            <article class="stat-card">
-              <span class="stat-value">Role-based</span>
-              <span class="stat-label">separate entry pages</span>
-            </article>
-            <article class="stat-card">
-              <span class="stat-value">Live data</span>
-              <span class="stat-label">from volunteer signup</span>
-            </article>
-            <article class="stat-card">
-              <span class="stat-value">Smart match</span>
-              <span class="stat-label">skill, time, distance, trust</span>
-            </article>
-          </div>
-        </section>
-
-        <section class="hero-panel">
-          <div class="panel-card focus-card">
-            <p class="panel-kicker">Prototype flow</p>
-            <h2>Register volunteers first, then match them from the organiser dashboard.</h2>
-            <ul class="feature-list">
-              <li>Volunteer sign up and login</li>
-              <li>Organiser sign up and login</li>
-              <li>Volunteer profile stored in browser</li>
-              <li>Organiser sees only registered volunteers</li>
-            </ul>
-          </div>
-
-          <div class="panel-card glass-card">
-            <p class="panel-kicker">Demo tip</p>
-            <div class="score-ring">
-              <span>3</span>
-              <small>steps</small>
+        <div class="hero-illustration">
+          <div class="illustration-card">
+            <div class="card-item card-1">
+              <div class="card-icon">💡</div>
+              <p>Skills</p>
             </div>
-            <p class="panel-text">
-              Create 2-3 volunteer profiles with different skills, then log in as an organiser
-              and show the ranking engine in action.
-            </p>
+            <div class="card-item card-2">
+              <div class="card-icon">⏰</div>
+              <p>Availability</p>
+            </div>
+            <div class="card-item card-3">
+              <div class="card-icon">📍</div>
+              <p>Location</p>
+            </div>
+            <div class="card-item card-4">
+              <div class="card-icon">⭐</div>
+              <p>Trust</p>
+            </div>
           </div>
-        </section>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Volunteers Matched</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Organizations</div>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="section">
-        <div class="section-heading">
-          <p class="eyebrow">How to demo</p>
-          <h2>Simple and judge-friendly flow</h2>
+      <!-- Features Section -->
+      <section class="features-section">
+        <div class="section-header">
+          <h2>How It Works</h2>
+          <p>Three simple steps to perfect matches</p>
         </div>
 
-        <div class="workflow-grid">
-          <article class="workflow-card">
-            <span class="step-tag">01</span>
-            <h3>Volunteer fills profile</h3>
-            <p>Name, skill, address, city, trust score, and available time slots are stored for matching.</p>
-          </article>
-          <article class="workflow-card">
-            <span class="step-tag">02</span>
-            <h3>Organiser posts need</h3>
-            <p>The organiser chooses the exact skill, address, city, urgency, start time, and duration.</p>
-          </article>
-          <article class="workflow-card">
-            <span class="step-tag">03</span>
-            <h3>Engine ranks matches</h3>
-            <p>The system recommends the strongest volunteer using only the profiles created in the app.</p>
-          </article>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-number">01</div>
+            <div class="feature-icon">📝</div>
+            <h3>Create Your Profile</h3>
+            <p>Volunteers share their skills, availability, and location. Organizations post their needs.</p>
+            <div class="feature-check">✓ Quick setup</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-number">02</div>
+            <div class="feature-icon">🤖</div>
+            <h3>Smart Matching</h3>
+            <p>Our AI engine analyzes skills, time, location, and trust to find the perfect matches.</p>
+            <div class="feature-check">✓ Instant results</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-number">03</div>
+            <div class="feature-icon">🎯</div>
+            <h3>Make an Impact</h3>
+            <p>Connect with meaningful opportunities and make a real difference in your community.</p>
+            <div class="feature-check">✓ Real impact</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why SkillBridge Section -->
+      <section class="why-section">
+        <div class="section-header">
+          <h2>Why Choose SkillBridge?</h2>
+          <p>Built for modern volunteering</p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">⚡</div>
+            <h3>Lightning Fast</h3>
+            <p>Get matched in seconds, not weeks. Our algorithm works 24/7 to find your ideal fit.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🔒</div>
+            <h3>Secure & Private</h3>
+            <p>Your data is encrypted and protected. We never share your information without consent.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🌍</div>
+            <h3>Global Reach</h3>
+            <p>Connect with volunteers and organizations worldwide. No boundaries to making an impact.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">📊</div>
+            <h3>Smart Analytics</h3>
+            <p>Track your impact with detailed analytics. Measure your contribution to the community.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <section class="testimonials-section">
+        <div class="section-header">
+          <h2>What Users Love</h2>
+          <p>Real stories from our community</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <div class="testimonial-name">Sarah Chen</div>
+              <div class="testimonial-role">Community Organiser</div>
+            </div>
+            <p class="testimonial-text">
+              "SkillBridge is a game-changer! We found the perfect volunteers for our environmental project in just 24 hours. The matching accuracy is incredible."
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <div class="testimonial-name">Marcus Johnson</div>
+              <div class="testimonial-role">Active Volunteer</div>
+            </div>
+            <p class="testimonial-text">
+              "As someone new to volunteering, SkillBridge made it so easy to find opportunities that match my skills and schedule. Highly recommended!"
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <div class="testimonial-name">Elena Rodriguez</div>
+              <div class="testimonial-role">NGO Director</div>
+            </div>
+            <p class="testimonial-text">
+              "We've successfully completed 50+ projects using SkillBridge. The platform saves us hours in recruitment and consistently delivers quality matches."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <div class="contact-wrapper">
+          <div class="contact-text">
+            <h2>Ready to Make a Difference?</h2>
+            <p>Join thousands of volunteers and organizations already using SkillBridge to create meaningful connections.</p>
+            <div class="contact-details">
+              <div class="detail-item">
+                <span class="detail-icon">📧</span>
+                <div>
+                  <div class="detail-label">Email Us</div>
+                  <a href="mailto:hello@skillbridge.com">hello@skillbridge.com</a>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">📱</span>
+                <div>
+                  <div class="detail-label">Call Us</div>
+                  <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form">
+            <h3>Send us a Message</h3>
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Tell us more..." rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-logo">
+              <span class="logo-icon">🌟</span>
+              <span>SkillBridge</span>
+            </div>
+            <p>Connecting passion with purpose. One volunteer at a time.</p>
+            <div class="social-links">
+              <a href="#" title="Twitter">𝕏</a>
+              <a href="#" title="LinkedIn">in</a>
+              <a href="#" title="Facebook">f</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="./volunteer.html">For Volunteers</a></li>
+              <li><a href="./organiser.html">For Organisers</a></li>
+              <li><a href="#features">Features</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#blog">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 SkillBridge. Making volunteering smarter, together.</p>
+        </div>
+      </div>
+    </footer>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
